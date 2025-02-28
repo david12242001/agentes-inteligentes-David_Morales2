@@ -27,23 +27,4 @@ class AgentePatrulla:
         # Movimiento del agente
         self.posicion_actual += self.direccion
         
-        # Mantener el agente dentro de los límites de la ruta
-        if self.posicion_actual >= len(self.ruta):
-            self.posicion_actual = len(self.ruta) - 1
-            self.cambiar_direccion()
-        elif self.posicion_actual < 0:
-            self.posicion_actual = 0
-            self.cambiar_direccion()
-        
-        # Simula el movimiento del agente de manera más humana
-        print(f"El agente se mueve hacia: {self.ruta[self.posicion_actual]}")
-        time.sleep(2)  # Pausa de 2 segundos para hacer el movimiento más lento
-
-# Definir la ruta de patrullaje
-ruta = ["A", "B", "C", "D", "E"]
-
-# Crear el agente y simular su movimiento
-agente = AgentePatrulla(ruta)
-
-for _ in range(15):  # Simulación de 15 movimientos
-    agente.mover()
+   
